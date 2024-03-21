@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 using MyApp.Helpers;
+using MyApp.Interfaces;
 using MyApp.Services;
 using System.Windows.Input;
 
@@ -8,7 +9,7 @@ namespace MyApp.ViewModel
     public class MainWindowViewModel : ViewModelBase
     {
         private readonly ILogger<MainWindowViewModel> logger;
-        private readonly MyService myService;
+        private readonly IMyService myService;
 
         private string retString = string.Empty;
 
@@ -24,7 +25,7 @@ namespace MyApp.ViewModel
         {
 
         }
-        public MainWindowViewModel(ILogger<MainWindowViewModel> logger, MyService myService)
+        public MainWindowViewModel(ILogger<MainWindowViewModel> logger, IMyService myService)
         {
             this.logger = logger;
             this.myService = myService;

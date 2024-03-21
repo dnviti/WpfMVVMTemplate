@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using MyApp.Interfaces;
 using MyApp.Pages;
 using MyApp.Services;
 using MyApp.ViewModel;
@@ -64,7 +65,7 @@ namespace MyApp
 
             // My Services
             services.AddSingleton<AlertService>();
-            services.AddSingleton<MyService>();
+            services.AddSingleton<IMyService, MyService>();
             #endregion Configure Services
 
             #region Configure ViewModels

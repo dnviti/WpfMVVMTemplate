@@ -1,8 +1,9 @@
 ﻿using Microsoft.Extensions.Logging;
+using MyApp.Interfaces;
 
 namespace MyApp.Services
 {
-    public class MyService
+    public class MyService : IMyService
     {
         private readonly ILogger<MyService> logger;
         private readonly AlertService alert;
