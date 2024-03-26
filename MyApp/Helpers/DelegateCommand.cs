@@ -1,4 +1,5 @@
-﻿namespace MyApp.Helpers
+﻿#nullable disable
+namespace MyApp.Helpers
 {
     using System;
     using System.Windows.Input;

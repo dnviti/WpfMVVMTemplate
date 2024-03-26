@@ -8,8 +8,8 @@ namespace MyApp.ViewModel
 {
     public class MainWindowViewModel : ViewModelBase
     {
-        private readonly ILogger<MainWindowViewModel> logger;
-        private readonly IMyService myService;
+        private readonly ILogger<MainWindowViewModel> logger = null!;
+        private readonly IMyService myService = null!;
 
         private string retString = string.Empty;
 

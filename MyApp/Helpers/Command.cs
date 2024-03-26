@@ -12,6 +12,7 @@ namespace MyApp.Helpers
             this.execute = execute ?? throw new ArgumentNullException(nameof(execute));
         }
 
+#pragma warning disable CS0067
         public event EventHandler? CanExecuteChanged;
 
         public bool CanExecute(object? parameter)
